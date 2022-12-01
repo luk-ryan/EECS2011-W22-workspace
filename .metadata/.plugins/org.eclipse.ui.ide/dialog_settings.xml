@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="ExternalProjectImportWizard">
+		<item key="WizardProjectsImportPage.STORE_ARCHIVE_SELECTED" value="true"/>
+		<item key="WizardProjectsImportPage.STORE_CLOSE_CREATED_PROJECTS_ID" value="false"/>
+		<item key="WizardProjectsImportPage.STORE_HIDE_CONFLICTING_PROJECTS_ID" value="false"/>
+		<list key="WizardProjectsImportPage.STORE_DIRECTORIES">
+			<item value=""/>
+		</list>
+		<list key="WizardProjectsImportPage.STORE_ARCHIVES">
+			<item value="C:\Users\ryanl\Downloads\ExampleRecursion.zip"/>
+			<item value="C:\Users\ryanl\Downloads\ExampleBST.zip"/>
+			<item value="C:\Users\ryanl\Downloads\Test2b.zip"/>
+			<item value="C:\Users\ryanl\Downloads\PracticeTest2.zip"/>
+			<item value="C:\Users\ryanl\Downloads\EECS2011_W22_A2.zip"/>
+			<item value="C:\Users\ryanl\Downloads\ExampleTrees.zip"/>
+			<item value="C:\Users\ryanl\Downloads\Test1b.zip"/>
+			<item value="C:\Users\ryanl\Downloads\PracticeTest1.zip"/>
+			<item value="C:\Users\ryanl\Downloads\ExampleStringLinkedLists.zip"/>
+			<item value="C:\Users\ryanl\Downloads\ExampleGenericLinkedLists.zip"/>
+			<item value="C:\Users\ryanl\Downloads\EECS2011_W22_A1.zip"/>
+		</list>
+	</section>
+</section>

@@ -1,0 +1,13 @@
+INDEX VERSION 1.131+C:\Users\ryanl\OneDrive\Documents\GitHub\EECS2011-W22-workspace\.metadata\.plugins\org.eclipse.jdt.core
+3358338232.index
+3681187226.index
+4031194713.index
+3898311327.index
+106292147.index
+159222862.index
+3152615621.index
+1253751938.index
+585124223.index
+2673652233.index
+1461045860.index
+1200059353.index

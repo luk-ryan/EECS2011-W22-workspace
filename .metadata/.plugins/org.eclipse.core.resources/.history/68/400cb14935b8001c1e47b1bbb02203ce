@@ -1,0 +1,52 @@
+package model;
+
+import tests.TreeNode;
+import tests.Expression;
+import tests.Operand;
+import tests.Operator;
+import tests.SLLNode;
+
+public class TreeUtilities {
+
+	/* Method 1: getInfixTree() */
+	public TreeNode<Expression> getInfixTree(SLLNode<Expression> expression) {
+		TreeNode<Expression> operand1 = new TreeNode<Expression>(expression.getElement());
+		TreeNode<Expression> root = getInfixTreeHelper(expression, operand1);
+		while (root.getParent() != null) {
+			root = root.getParent();
+		}
+		return root;
+	}
+	
+	private TreeNode<Expression> getInfixTreeHelper(SLLNode<Expression> expression, TreeNode<Expression> operand1) {
+		
+		SLLNode<Expression> current = expression.getNext();
+		TreeNode<Expression> root = operand1;
+		
+		if (current != null) {
+			
+			if (current.getElement() instanceof Operator) {
+				root = new TreeNode<Expression>(current.getElement());
+				TreeNode<Expression> operand2 = new TreeNode<Expression>(expression.getElement());
+
+				root.addChild(operand1);
+				root.addChild(operand2);
+				operand1.setParent(root);
+				operand2.setParent(root);
+				root = getInfixTreeHelper(current, root);
+				
+			}
+			else {
+				root = getInfixTreeHelper(current, root);
+			}
+		}
+
+		return root;
+	}
+	
+	/* Method 2: getInfixSequence() */
+	public String getInfixSequence(SLLNode<Expression> expression) {
+		String result = "";
+		return result;
+	}
+}

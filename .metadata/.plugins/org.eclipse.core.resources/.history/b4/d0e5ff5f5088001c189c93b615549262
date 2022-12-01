@@ -1,0 +1,130 @@
+package model;
+
+import tests.Node;
+
+public class ListUtilities {
+	private Node<Integer> head;
+	private Node<Integer> tail;
+	private int size;
+
+	public ListUtilities() {
+		/* 
+		 * Creates an empty list:
+		 * 	+ head has the default value null.
+		 * 	+ tail has the default value null.
+		 * 	+ size has the default value 0.
+		 */
+	}
+
+	public Node<Integer> getFirst() {
+		return head;
+	}
+	
+	public Node<Integer> getLast() {
+		return tail;
+	}
+
+	public void setHead(Node<Integer> n) {
+		head = n;
+	}
+
+	public int getSize() {
+		int size = 0;
+		Node<Integer> current = head;
+		while(current != null) { /* loop exists when current == null */
+			size ++;
+			current = current.getNext();
+		}
+		return size; 
+	}
+
+	public Node<Integer> getTail() { 
+		Node<Integer> current = head;
+		Node<Integer> tail = null;
+		while (current != null) {   
+			tail = current;
+			current = current.getNext();
+		}
+		return tail;
+	}
+
+	public void addFirst(int e) {
+		head = new Node<Integer>(e, head);
+		// The above line is equivalent to the following 3 lines:
+		//		Node nn = new Node(e, null);
+		//		nn.setNext(head);
+		//		head = nn;
+		if(size == 0) {
+			tail = head;
+		}
+		size ++;
+	} 
+	
+	
+//
+//	public Node<Integer> getNodeAt (int i) {
+//		int size = this.getSize(); // a more efficient implementation is to make `size` an attribute.
+//		if (i < 0 || i >= size) { 
+//			throw new IllegalArgumentException("Invalid Index"); 
+//		}
+//		else {
+//			int index = 0; 
+//			Node<Integer> current = head;
+//			while (index < i) { /* exit when index == i */
+//				index ++;
+//				/* current is set to node at index i 
+//				 * last iteration: index incremented from i - 1 to i
+//				 */
+//				current = current.getNext();
+//			} 
+//			return current; 
+//		} 
+//	}
+//
+//	public void addAt (int i, int e) {  
+//		if (i < 0 || i > size) { 
+//			throw new IllegalArgumentException("Invalid Index.");
+//		} 
+//		else { 
+//			if (i == 0) { 
+//				addFirst(e); 
+//			} 
+//			else {
+//				Node<Integer> nodeBefore = getNodeAt(i - 1);
+//				Node<Integer> newNode = new Node<>(e, nodeBefore.getNext());
+//				nodeBefore.setNext(newNode);
+//				size ++;
+//			} 
+//		} 
+//	}
+//
+//	public void removeFirst () {
+//		if (size == 0) { /* error */ }
+//		else if (size == 1) {
+//			head = null; 
+//			tail = null;
+//			size --; 
+//		}
+//		else {
+//			Node<Integer> oldHead = head;
+//			head = oldHead.getNext();
+//			oldHead.setNext(null); 
+//			size --; 
+//		}
+//	}
+//
+//	public void removeLast () { 
+//		if (size == 0) {
+//			throw new IllegalArgumentException("Empty List.");
+//		} 
+//		else if (size == 1) {
+//			removeFirst();
+//		} 
+//		else {
+//			Node<Integer> secondLastNode = getNodeAt(size - 2);
+//			secondLastNode.setNext(null); 
+//			tail = secondLastNode;
+//			size --;
+//		} 
+//	}  
+}

@@ -1,0 +1,50 @@
+package model;
+
+import tests.Node;
+
+public class ListUtilities {
+	private Node<String> head;
+	private Node<String> tail;
+	private int size;
+
+	public ListUtilities() {
+		/* 
+		 * Creates an empty list:
+		 * 	+ head has the default value null.
+		 * 	+ tail has the default value null.
+		 * 	+ size has the default value 0.
+		 */
+	}
+
+	public Node<String> getFirst() {
+		return head;
+	}
+	
+	public Node<String> getLast() {
+		return tail;
+	}
+
+	public void setHead(Node<String> n) {
+		head = n;
+	}
+
+	public int getSize() {
+		int size = 0;
+		Node<String> current = head;
+		while(current != null) { /* loop exists when current == null */
+			size ++;
+			current = current.getNext();
+		}
+		return size; 
+	}
+
+	public Node<String> getTail() { 
+		Node<String> current = head;
+		Node<String> tail = null;
+		while (current != null) {   
+			tail = current;
+			current = current.getNext();
+		}
+		return tail;
+	}
+}

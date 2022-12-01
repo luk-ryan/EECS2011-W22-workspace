@@ -1,0 +1,47 @@
+package model;
+
+import tests.Node;
+
+public class ListUtilities {
+	private Node<String> head;
+	private Node<String> tail;
+
+	public ListUtilities() {}
+
+	public Node<String> getFirst() {
+		return this.head;
+	}
+	
+	public Node<String> getLast() {
+		return this.tail;
+	}
+
+	public void setHead(Node<String> e) {
+		this.head = e;
+	}
+
+	public int getSize() {
+		int size = 0;
+		Node<String> current = head;
+		while(current != null) { /* loop exists when current == null */
+			size ++;
+			current = current.getNext();
+		}
+		return size; 
+	}
+
+	public Node<String> getTail() { 
+		Node<String> current = head;
+		Node<String> tail = null;
+		while (current != null) {   
+			tail = current;
+			current = current.getNext();
+		}
+		return tail;
+	}
+	
+	public Node<String> getAllPrefixes(Node<Integer> input, int start, int end) {
+		
+		return head;
+	}
+}
